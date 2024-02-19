@@ -1,0 +1,33 @@
+[versions]
+ktor="2.3.8"
+logger="6.0.3"
+kotlinx-coroutines="1.7.3"
+jupiter-junit="5.3.1"
+jsoup="1.16.1"
+
+[libraries]
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinx-coroutines" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+kotlin-logging-jvm = { module = "io.github.oshai:kotlin-logging-jvm", version.ref = "logger" }
+jupiter-junit-api = { module = "org.junit.jupiter:junit-jupiter-api", version.ref = "jupiter-junit" }
+jupiter-junit-engine = { module = "org.junit.jupiter:junit-jupiter-engine", version.ref = "jupiter-junit" }
+org-jsoup = { module = "org.jsoup:jsoup", version.ref = "jsoup" }
+
+[bundles]
+kotlinx = [
+    "kotlinx-coroutines-core",
+]
+
+jsoup = [
+    "org-jsoup"
+]
+
+logger = [
+    "kotlin-logging-jvm"
+]
+
+ktor = [
+    "ktor-client-core",
+    "ktor-client-okhttp"
+]
